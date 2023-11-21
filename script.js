@@ -102,15 +102,16 @@ let specialCharacters = [
   // Function to prompt user for password options
   function getPasswordOptions() {
   
+    lowerCharPrompt = parseInt(prompt("How many lower characters would you like in your password? Please enter a number")) 
+    upperCharPrompt = parseInt(prompt("How many UPPER characters would you like in your password? Please enter a number"))
     specialCharPrompt = parseInt(prompt("How many special characters ($,%,£, etc) would you like in your password? Please enter a number"))
     numericCharPrompt = parseInt(prompt("How many numerical characters (0...9) would you like in your password? Please enter a number"))
-    lowerCharPrompt = parseInt(prompt("How many lower characters would you like in your password? Please enter a number")) 
-    upperCharPrompt = parseInt(prompt("How many UPPER characters would you like in your password? Please enter a number"))  
+      
     passwordLenght = specialCharPrompt+numericCharPrompt+lowerCharPrompt+upperCharPrompt;
     
   
-    if((passwordLenght)>128){
-      alert("Your password can not be more than 128-character long. Please try again")
+    if((passwordLenght)>128 || (passwordLenght < 8)){
+      alert("Your password must 8 - 128 characters long. Please try again")
       getPasswordOptions()
     }
   
