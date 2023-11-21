@@ -89,10 +89,6 @@ let specialCharacters = [
   ];
   let password;
   let rawPasswordArr = [];
-  let specialArr = [];
-  let numericArr = [];
-  let lowerArr = [];
-  let upperArr = [];
   let specialCharPrompt = 0;
   let numericCharPrompt = 0;
   let lowerCharPrompt = 0;
@@ -132,18 +128,17 @@ let specialCharacters = [
   function generatePassword() {
   
     for(i=0; i<specialCharPrompt;i++){
-      specialArr.push(getRandom(specialCharacters))
+        rawPasswordArr.push(getRandom(specialCharacters))
     }
     for(i=0; i<numericCharPrompt;i++){    
-         numericArr.push(getRandom(numericCharacters));  
+        rawPasswordArr.push(getRandom(numericCharacters));  
     }
     for(i=0; i<lowerCharPrompt;i++){
-         lowerArr.push(getRandom(lowerCasedCharacters)); 
+        rawPasswordArr.push(getRandom(lowerCasedCharacters)); 
     } 
     for(i=0; i<upperCharPrompt;i++){
-        upperArr.push(getRandom(upperCasedCharacters));
+        rawPasswordArr.push(getRandom(upperCasedCharacters));
     }
-    rawPasswordArr = specialArr.concat(numericArr, lowerArr, upperArr);
     rawPasswordArr.sort(() => Math.random() - 0.5)
     password = rawPasswordArr.join("");
     
