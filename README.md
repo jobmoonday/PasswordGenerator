@@ -30,6 +30,10 @@ The app generates a random password when the button is clicked
       * Special characters ($@%&*, etc)
     * Once prompts are answered then the password is generated and displayed
 
+The app is at the following URL:
+
+https://jobmoonday.github.io/PasswordGenerator/
+
 ## Screenshots of the app
 ![alt text](Screenshot_2.png)
 ![alt text](Screenshot_3.png)
